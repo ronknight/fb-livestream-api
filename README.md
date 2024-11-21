@@ -10,7 +10,6 @@
 <a href="https://youtube.com/@PinoyITSolution"><img src="https://img.shields.io/youtube/channel/subscribers/UCeoETAlg3skyMcQPqr97omg"></a>
 <a href="#"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
 <a href="https://github.com/ronknight/fb-livestream-api/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-<a href="#"><img src="https://img.shields.io/badge/Made%20with-Love-1f425f.svg"></a>
 <a href="https://github.com/ronknight"><img src="https://img.shields.io/badge/Made%20with%20%F0%9F%A4%8D%20by%20-Ronknight%20-%20red"></a>
 </p>
 
@@ -125,11 +124,12 @@ It utilizes the **Facebook Graph API** to fetch livestream statuses and implemen
 
 ```mermaid
 graph TD
-A[User] -->|HTTP Request| B[Flask App]
-B --> C[/check-livestream Endpoint]
-C -->|Facebook Graph API Request| D[Facebook Livestream Status]
-D -->|Returns JSON| C
-C -->|Livestream Details| E[User Interface]
+    A[User] -->|HTTP Request| B[Flask App]
+    B --> C[/check-livestream Endpoint]
+    C -->|Facebook Graph API Request| D[Facebook Livestream Status]
+    D -->|Returns JSON| E[Response]
+    E -->|Status: Live, Scheduled, or Offline| F[User Interface]
+
 ```
 
 ---
