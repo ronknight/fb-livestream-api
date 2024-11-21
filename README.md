@@ -125,7 +125,7 @@ It utilizes the **Facebook Graph API** to fetch livestream statuses and implemen
 ```mermaid
 graph TD
     A[User] -->|HTTP Request| B[Flask App]
-    B --> C[/check-livestream Endpoint]
+    B --> C[Check Livestream Endpoint]
     C -->|Facebook Graph API Request| D[Facebook Livestream Status]
     D -->|Returns JSON| E[Response]
     E -->|Status: Live, Scheduled, or Offline| F[User Interface]
