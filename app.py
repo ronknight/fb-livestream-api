@@ -105,8 +105,8 @@ if __name__ == '__main__':
         host="0.0.0.0",
         port=5000,
         ssl_context=(
-            '/var/cpanel/ssl/apache_tls/pinoyitsolution.com/cert.pem',  # Certificate file
-            '/var/cpanel/ssl/apache_tls/pinoyitsolution.com/key.pem'    # Private key file
+            '/home/pinoyits/var/cpanel/ssl/apache_tls/pinoyitsolution.com/cert.pem',  # Certificate file
+            '/home/pinoyits/var/cpanel/ssl/apache_tls/pinoyitsolution.com/key.pem'    # Private key file
             #'cert.pem',  # SSL Certificate
             #'key.pem'   # SSL Private Key
         )
