@@ -29,7 +29,7 @@ cors_origins = os.getenv("CORS_ORIGINS", "").split(",")
 CORS(app, resources={r"/*": {"origins": cors_origins}})
 
 # URL for the background image if no livestream
-NO_LIVESTREAM_IMAGE = "https://gethsemanebaptistchu5338.live-website.com/wp-content/uploads/2024/11/placeholder-background.png"
+NO_LIVESTREAM_IMAGE = "https://gbclongbeach.org/wp-content/uploads/2024/11/placeholder-background.png"
 
 # Livestream schedule (in UTC)
 SCHEDULE = [
@@ -100,12 +100,14 @@ def health_check():
     return jsonify({"status": "healthy"}), 200
 
 if __name__ == '__main__':
-    # Use Flask's built-in SSL context for HTTPS
+    # Enable SSL for Flask
     app.run(
         host="0.0.0.0",
         port=5000,
         ssl_context=(
-            '/var/cpanel/ssl/apache_tls/pinoyitsolution.com/cert.pem',  # SSL Certificate
-            '/var/cpanel/ssl/apache_tls/pinoyitsolution.com/key.pem'   # SSL Private Key
+            '/var/cpanel/ssl/apache_tls/pinoyitsolution.com/cert.pem',  # Certificate file
+            '/var/cpanel/ssl/apache_tls/pinoyitsolution.com/key.pem'    # Private key file
+            #'cert.pem',  # SSL Certificate
+            #'key.pem'   # SSL Private Key
         )
     )
